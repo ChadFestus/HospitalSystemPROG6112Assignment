@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class HospitalSystemsTest {
     private WardManager manager;
 
-    // Runs before every single test to give a fresh WardManager instance
+    
     @BeforeEach
     public void setUp() {
         manager = new WardManager();
@@ -89,10 +89,7 @@ public class HospitalSystemsTest {
         assertEquals(2, manager.getOccupiedBedCount(), "Total occupied beds should be 2");
     }
 
-    // ==========================================
-    // 3. VALIDATION & BOUNDARY TESTS (5 Marks)
-    // ==========================================
-
+   
     @Test
     public void testPreventDuplicatePatientID() {
         Patient p1 = new Patient("P10", "Sam", "Wilson", 30, "Male", "Checkup", PatientCategory.OUTPATIENT);
